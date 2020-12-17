@@ -1,0 +1,23 @@
+/* .slider-container {
+    background-image: -moz-linear-gradient(
+        270deg,
+        rgba(255, 255, 255, 0) 80%,
+        rgb(255, 255, 255) 100%
+    );
+    background-image: -webkit-linear-gradient(
+        270deg,
+        rgba(255, 255, 255, 0) 80%,
+        rgb(255, 255, 255) 100%
+    );
+    background-image: linear-gradient(
+        to top,
+        rgba(255, 255, 255, 0) 80%,
+        rgb(255, 255, 255) 100%
+    ); 
+} */
+
+li {
+    font-size: 20px;
+    margin-right: 60px;
+    cursor: pointer;
+}
