@@ -1,10 +1,55 @@
 {
     "sliderPhoto": [
-        {
-            "image1": "https://img.drive.ru/i/0/5ea6dd8dec05c41134000004.jpg",
-            "image2": "https://s0.rbk.ru/v6_top_pics/media/img/1/02/755810893497021.jpg",
-            "image3": "https://static.dw.com/image/51362527_401.jpg",
-            "image4": "https://cdnimg.rg.ru/img/content/176/00/89/tesla_model_x_p100d_41_d_850.jpeg"
+            { 
+                "title": "AUDI E-tron",
+                "image": "https://img.drive.ru/i/0/5e5927aeec05c4db6b000010.jpg",
+                "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, at.",
+                "id": 1
+            },
+            { 
+                "title": "Tesla Model X",
+                "image": "https://tesla-cdn.thron.com/delivery/public/image/tesla/efbb6471-e1b8-4533-b41a-6df9d50c0a42/bvlatuR/std/0x0/performance-hero@2",
+                "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, at.",
+                "id": 2
+            },
+            { 
+                "title": "Nissan Ariya",
+                "image": "https://www.zr.ru/d/story/1b/920091/000.jpg",
+                "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, at.",
+                "id": 3
+            },
+            { 
+                "title": "Mercedes EQC",
+                "image": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/19c0333-004-1558012121.jpg",
+                "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, at.",
+                "id": 4
+            }
+        
+    ],
+    "popularCar": [
+        { 
+            "title": "AUDI E-tron",
+            "image": "https://img.drive.ru/i/0/5e5927aeec05c4db6b000010.jpg",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, at.",
+            "id": 1
+        },
+        { 
+            "title": "Tesla Model X",
+            "image": "https://tesla-cdn.thron.com/delivery/public/image/tesla/efbb6471-e1b8-4533-b41a-6df9d50c0a42/bvlatuR/std/0x0/performance-hero@2",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, at.",
+            "id": 2
+        },
+        { 
+            "title": "Nissan Ariya",
+            "image": "https://www.zr.ru/d/story/1b/920091/000.jpg",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, at.",
+            "id": 3
+        },
+        { 
+            "title": "Mercedes EQC",
+            "image": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/19c0333-004-1558012121.jpg",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, at.",
+            "id": 4
         }
     ]
 }
