@@ -51,5 +51,16 @@
             "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, at.",
             "id": 4
         }
+    ],
+    "cars": [
+        {
+            "title": "AUDI E-tron",
+            "price": "60 000$",
+            "bodyType": "SUV",
+            "driveUnit": "4WD",
+            "range": "400 km",
+            "room": "7",
+            "image": ""
+        }
     ]
 }
