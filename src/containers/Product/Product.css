@@ -1,0 +1,62 @@
+/* ============================================ Product List */
+
+.product-list {
+    width: 100%;
+}
+
+.product-list-container {
+    margin: 0 100px;
+}
+
+.product-list-title {
+    margin-top: 70px;
+    text-align: center;
+}
+
+.product-list-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+/*  ==================================== Product Card */
+
+.productCard-image {
+    width: 350px;
+    height: 200px;
+}
+
+/* ================================================================ Product Details */
+
+.product-details {
+    margin-top: 70px;
+}
+
+.product-details-container {
+    margin: 0 100px;
+}
+
+.product-details-content {
+    display: flex;
+}
+
+.product-details-info {
+}
+
+.product-details-image {
+    width: 400px;
+    height: 250px;
+    margin-right: 300px;
+}
+
+.product-details-image img {
+    height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+/* ========================================================= Edit Product */
+
+.edit-product {
+    margin-top: 70px;
+}

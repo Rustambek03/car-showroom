@@ -1,0 +1,182 @@
+.header {
+    height: 65px;
+    /* box-shadow: 0 0 2px rgba(0, 0, 0, 0.5); */
+    /* background-color: #333333; */
+    background: transparent;
+    overflow: hidden;
+    position: fixed;
+    z-index: 2;
+    display: flex;
+    width: 100%;
+    /* filter: blur(3px); */
+    /* backdrop-filter: blur(5px) saturate(0%) contrast(0%); */
+    backdrop-filter: blur(50px);
+    top: 0;
+}
+
+.header-container {
+    width: 100%;
+    padding: 0 10px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    /* justify-content: center; */
+}
+
+.header-menu {
+    display: flex;
+    align-items: center;
+}
+
+.header-menu-ul {
+    padding: 0;
+    color: white;
+    margin-bottom: 0px;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-menu-li {
+    color: black;
+    /* margin: 0; */
+    margin: 0 25px 0 25px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.header-icon-img {
+    width: 80px;
+}
+
+.header-account div {
+    display: flex;
+}
+
+.header-account h5 {
+    margin: 0;
+    margin-right: 20px;
+    cursor: pointer;
+    color: black;
+}
+
+/* ====================================== BUrger Menu */
+
+.header-burger-btn {
+    display: block;
+    position: relative;
+    height: 21px;
+    width: 30px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.header-burger-btn::before {
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background-color: black;
+    top: 0;
+    transition: 0.3s;
+}
+
+.header-burger-btn span {
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background-color: black;
+    top: 9px;
+    transition: 0.3s;
+}
+
+.header-burger-btn::after {
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background-color: black;
+    bottom: 0;
+    transition: 0.3s;
+}
+
+.header-burger-btn.active::before {
+    transform: rotate(45deg);
+    top: 9px;
+    transition: 0.3s;
+}
+
+.header-burger-btn.active::after {
+    transform: rotate(-45deg);
+    bottom: 9px;
+    transition: 0.3s;
+}
+
+.header-burger-btn.active span {
+    opacity: 0;
+}
+
+.burger-menu {
+    position: absolute;
+    margin: 0;
+    right: -300px;
+    width: 300px;
+    height: 100%;
+    padding: 20px;
+    background-color: white;
+    transition: 0.5s;
+    overflow: hidden;
+    position: fixed;
+    z-index: 1;
+}
+
+.burger-menu.active {
+    right: 0;
+    transition: 0.5s;
+}
+
+.burger-menu-ul {
+    list-style-type: none;
+    /* margin-top: 50px; */
+}
+
+.burger-menu-li {
+    margin: 20px 0;
+    cursor: pointer;
+}
+
+/* ================================================ Modal */
+
+.auth-modal {
+    position: absolute;
+    margin-top: 65px;
+    right: -300px;
+    width: 300px;
+    height: 100%;
+    padding: 20px;
+    background-color: yellow;
+    transition: 0.5s;
+    overflow: hidden;
+    position: fixed;
+    z-index: 1;
+}
+
+.auth-modal.active {
+    right: 0;
+    transition: 0.5s;
+}
+
+.auth-modal-icon {
+    text-align: center;
+}
+
+.auth-modal-title {
+    text-align: center;
+}
+
+.auth-modal-logOut {
+    text-align: center;
+}

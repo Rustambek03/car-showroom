@@ -1,7 +1,7 @@
 import React from 'react';
 import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
-import ProductListInHomePage from '../Product/ProductListInHomePage';
+import ProductListInHomePage from '../../Product/ProductListInHomePage';
 import ProductType from '../ProductType/ProductType';
 import Slider from '../Slider/Slider';
 
