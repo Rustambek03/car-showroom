@@ -1,0 +1,25 @@
+/* = ============================================================== Sidebar */
+
+.sidebar-price {
+    width: 100%;
+    border: solid 1px #d8dadb;
+    height: 120px;
+    border-radius: 5px;
+}
+
+.sidebar-title {
+    text-align: center;
+}
+
+.sidebar-slider {
+    text-align: center;
+}
+
+.sidebar-slider-inp {
+    display: flex;
+    justify-content: center;
+}
+
+.sidebar-slider-input {
+    width: 40%;
+}

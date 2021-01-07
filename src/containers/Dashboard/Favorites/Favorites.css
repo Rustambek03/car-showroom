@@ -1,0 +1,42 @@
+.favorites {
+    margin-top: 65px;
+    height: 100%;
+    background-color: #f8f8f9;
+}
+
+.favorites-container {
+    /* min-height: 100%; */
+    margin: 0 100px;
+}
+
+.favorites-title {
+    text-align: center;
+}
+
+.favorites-title h2 {
+    padding: 20px;
+}
+
+.favorites-card {
+    background-color: white;
+    margin-bottom: 20px;
+    width: 350px;
+    /* height: 200px; */
+}
+
+.favorites-card-image {
+    height: 200px;
+    width: 100%;
+}
+
+.favorites-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.favorites-card-favorites-icon {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+}

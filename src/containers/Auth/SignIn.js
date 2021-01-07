@@ -4,6 +4,9 @@ import Button from "react-bootstrap/Button";
 import useAuth from '../../context/AuthContext';
 import { Alert } from '@material-ui/lab';
 import './SignUp.css';
+import { useHistory } from 'react-router-dom';
+import Header from '../Dashboard/Header/Header';
+import Footer from '../Dashboard/Footer/Footer';
 
 const SignIn = () => {
 
@@ -13,6 +16,7 @@ const SignIn = () => {
     const { login, currentUser } = useAuth();
     const [error, setError] = useState('');
     const [loading, setLoading] = useState(false);
+    const history = useHistory()
 
 
     const handleSubmit = async (e) => {
@@ -22,6 +26,7 @@ const SignIn = () => {
             setError('');
             setLoading(true);
             await login(email, password);
+            history.push("/")
         } catch {
             setError('Failed to sign in');
         }
@@ -30,11 +35,9 @@ const SignIn = () => {
 
     return (
         <div>
+            <Header />
             <div className="Login">
                 {error && <Alert severity="error">{error}</Alert>}
-                <div>
-                    {currentUser && currentUser.email}
-                </div>
                 <Form onSubmit={handleSubmit}>
                     <Form.Group size="lg" controlId="email">
                         <Form.Label>Email</Form.Label>
@@ -66,6 +69,7 @@ const SignIn = () => {
                 </Button>
                 </Form>
             </div>
+            <Footer />
         </div>
     );
 };

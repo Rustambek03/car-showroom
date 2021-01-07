@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import { productsContext } from '../../../context/ProductContext';
-
+import './Slider.css'
 
 
 const Slider = () => {
@@ -22,8 +22,8 @@ const Slider = () => {
     const imageStyle = {
         width: "100%",
         objectFit: "cover",
-        maxHeight: "630px",
-        minHeight: "100%",
+        marginTop: "-80px",
+        height: "800px",
         zIndex: -1,
         position: "relative"
     }
@@ -31,7 +31,7 @@ const Slider = () => {
 
     return (
         <div >
-            <Carousel style={{ zIndex: "0" }} activeIndex={index} onSelect={handleSelect} interval={4000}>
+            <Carousel style={{ zIndex: "0" }} activeIndex={index} onSelect={handleSelect} interval={3500} controls={false}>
                 {sliderImage.map(item =>
                     < Carousel.Item key={item.id} >
                         <div className="slider-container">
@@ -41,10 +41,10 @@ const Slider = () => {
                                 alt="First slide"
                             />
                         </div>
-                        <Carousel.Caption>
+                        {/* <Carousel.Caption>
                             <h3 style={{ cursor: "pointer" }} >{item.title}</h3>
                             <p>{item.description} </p>
-                        </Carousel.Caption>
+                        </Carousel.Caption> */}
                     </Carousel.Item>
                 )}
             </Carousel>

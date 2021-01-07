@@ -8,7 +8,9 @@ let INIT_STATE = {
     popularCar: [],
     productList: [],
     productDetails: null,
-    editToProduct: null
+    editToProduct: null,
+    favoriteData: {},
+    productCountInFavorites: JSON.parse(localStorage.getItem("favorites")) ? JSON.parse(localStorage.getItem("favorites")).products.length : 0
 }
 
 const reducer = (state = INIT_STATE, action) => {
@@ -23,6 +25,12 @@ const reducer = (state = INIT_STATE, action) => {
             return { ...state, productDetails: action.payload }
         case "EDIT_PRODUCT":
             return { ...state, editToProduct: action.payload }
+        case "HANDLE_SEARCH":
+            return { ...state, productList: action.payload }
+        case "GET_FAVORITES":
+            return { ...state, favoriteData: action.payload }
+        case "COUNT_PRODUCTS_IN_FAVORITES":
+            return { ...state, productCountInFavorites: action.payload }
     }
 }
 
@@ -46,10 +54,18 @@ const ProductsContextProvider = ({ children }) => {
         })
     }
 
-    async function getProductList() {
-        let { data } = await axios(`http://localhost:8000/cars`)
+    async function getProductList(value) {
+        let { data } = await axios(`http://localhost:8000/cars${window.location.search}`)
         dispatch({
             type: "GET_PRODUCT_LIST",
+            payload: data
+        })
+    }
+
+    async function handleSearch(value) {
+        let { data } = await axios(`http://localhost:8000/cars?q=${value}`)
+        dispatch({
+            type: "HANDLE_SEARCH",
             payload: data
         })
     }
@@ -85,6 +101,63 @@ const ProductsContextProvider = ({ children }) => {
         getProductList()
     }
 
+
+    // =========================================================== Favorites
+
+
+    function getAllFavorites() {
+        return JSON.parse(localStorage.getItem('favorites'))
+    }
+
+    function getFavorites() {
+        let favorites = getAllFavorites()
+        dispatch({
+            type: "GET_FAVORITES",
+            payload: favorites
+        })
+    }
+
+    function addProductToFavorites(item) {
+        // console.log(productList)
+        let favorites = getAllFavorites()
+        if (!favorites) {
+            favorites = {
+                products: [],
+            }
+        }
+
+        let newProduct = {
+            product: item,
+        }
+
+        let obj = favorites.products.find(elem => elem.product.id === item.id)
+        if (obj) {
+            favorites.products = favorites.products.filter(elem => elem.product.id !== item.id)
+        } else {
+            favorites.products.push(newProduct)
+        }
+        localStorage.setItem('favorites', JSON.stringify(favorites))
+        getFavorites()
+    }
+
+
+    function checkItemInFavorites(id) {
+        let favorites = getAllFavorites()
+        if (!favorites) return false;
+        let newFavorites = favorites.products.filter((item) => item.product.id === id)
+        return newFavorites.length ? true : false;
+    }
+
+    function countProductsInfavorites() {
+        let favorites = getAllFavorites()
+        if (!favorites) return;
+        dispatch({
+            type: 'COUNT_PRODUCTS_IN_FAVORITES',
+            payload: favorites.products.length,
+        });
+    }
+
+
     return (
         <productsContext.Provider value={{
             sliderImage: state.sliderImage,
@@ -92,6 +165,8 @@ const ProductsContextProvider = ({ children }) => {
             productList: state.productList,
             productDetails: state.productDetails,
             editToProduct: state.editToProduct,
+            productCountInFavorites: state.productCountInFavorites,
+            favoriteData: state.favoriteData,
             addProduct,
             saveProduct,
             editProduct,
@@ -99,7 +174,12 @@ const ProductsContextProvider = ({ children }) => {
             getProductDetails,
             getProductList,
             getPopularCar,
-            getSlider
+            getSlider,
+            handleSearch,
+            addProductToFavorites,
+            checkItemInFavorites,
+            countProductsInfavorites,
+            getFavorites
         }}>
             {children}
         </productsContext.Provider>

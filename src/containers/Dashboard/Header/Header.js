@@ -1,12 +1,15 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import useAuth from '../../../context/AuthContext';
 import AccountCircleIcon from '@material-ui/icons/AccountCircle';
 import './Header.css';
-import { Button } from '@material-ui/core';
+import { Badge, Button } from '@material-ui/core';
+import FavoriteIcon from '@material-ui/icons/Favorite';
+import { productsContext } from '../../../context/ProductContext';
 
 const Header = () => {
 
+    const { productCountInFavorites, favoriteData } = useContext(productsContext)
     const [isMenuOpen, setIsMenuOpen] = useState(false)
     const { currentUser, logout } = useAuth()
     const [error, setError] = useState('')
@@ -30,12 +33,14 @@ const Header = () => {
         }
     }
 
+    // console.log(favoriteData.products.length)
+
     return (
         <>
             <div className="header" >
                 <div className="header-container">
                     <div className="header-icon">
-                        <img className="header-icon-img" src="https://cdn.iconscout.com/icon/free/png-512/rolls-royce-4-896237.png" alt="" />
+                        <img className="header-icon-img" src="https://www.pngrepo.com/download/303366/tesla-motors-logo.png" alt="" />
                     </div>
                     <div className="header-menu">
                         <ul className="header-menu-ul">
@@ -49,6 +54,13 @@ const Header = () => {
                             <li className="header-menu-li">Test Drive</li>
                             <li className="header-menu-li">Contact Us</li>
                         </ul>
+                    </div>
+                    <div className="header-favorites">
+                        <Link to="/favorites" style={{ textDecoration: "none" }} >
+                            <Badge badgeContent={productCountInFavorites} style={{ color: "black" }}>
+                                < FavoriteIcon style={{ cursor: "pointer", color: "black" }} />
+                            </Badge>
+                        </Link>
                     </div>
                     <div className="header-account">
                         {currentUser && currentUser.email ?

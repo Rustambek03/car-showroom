@@ -5,11 +5,11 @@
 }
 
 .product-list-container {
-    margin: 0 100px;
+    /* margin: 0 100px; */
 }
 
 .product-list-title {
-    margin-top: 70px;
+    margin-top: 65px;
     text-align: center;
 }
 
@@ -19,11 +19,39 @@
     flex-wrap: wrap;
 }
 
+.product-list-auto-content {
+    background-color: #f8f8f9;
+}
+
+.product-list-sidebar {
+    margin-top: 65px;
+    /* position: relative;
+    position: fixed; */
+}
+
+.product-list-pagination {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
 /*  ==================================== Product Card */
+
+.productCard {
+    background-color: white;
+    margin-bottom: 20px;
+}
 
 .productCard-image {
     width: 350px;
     height: 200px;
+}
+
+.productCard-favorites-icon {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
 }
 
 /* ================================================================ Product Details */
