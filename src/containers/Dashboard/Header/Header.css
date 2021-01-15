@@ -12,6 +12,7 @@
     /* backdrop-filter: blur(5px) saturate(0%) contrast(0%); */
     backdrop-filter: blur(50px);
     top: 0;
+    z-index: 5;
 }
 
 .header-container {
@@ -22,8 +23,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    /* justify-content: center; */
 }
 
 .header-menu {
@@ -42,10 +41,19 @@
 
 .header-menu-li {
     color: black;
-    /* margin: 0; */
     margin: 0 25px 0 25px;
     font-size: 20px;
     cursor: pointer;
+}
+
+.burger-header-menu-li {
+    display: flex;
+    align-items: center;
+    color: black;
+    margin: 20px 25px 20px 25px;
+    font-size: 20px;
+    cursor: pointer;
+    border-bottom: 1px solid #d8dadb;
 }
 
 .header-icon-img {
@@ -65,87 +73,32 @@
 
 /* ====================================== BUrger Menu */
 
-.header-burger-btn {
-    display: block;
-    position: relative;
-    height: 21px;
-    width: 30px;
-    cursor: pointer;
-    z-index: 2;
+.header-menu-burger-icon {
+    display: none;
 }
 
-.header-burger-btn::before {
-    content: "";
+.header-menu-burger {
     position: absolute;
-    height: 3px;
-    width: 100%;
-    background-color: black;
-    top: 0;
-    transition: 0.3s;
-}
-
-.header-burger-btn span {
-    position: absolute;
-    height: 3px;
-    width: 100%;
-    background-color: black;
-    top: 9px;
-    transition: 0.3s;
-}
-
-.header-burger-btn::after {
-    content: "";
-    position: absolute;
-    height: 3px;
-    width: 100%;
-    background-color: black;
-    bottom: 0;
-    transition: 0.3s;
-}
-
-.header-burger-btn.active::before {
-    transform: rotate(45deg);
-    top: 9px;
-    transition: 0.3s;
-}
-
-.header-burger-btn.active::after {
-    transform: rotate(-45deg);
-    bottom: 9px;
-    transition: 0.3s;
-}
-
-.header-burger-btn.active span {
-    opacity: 0;
-}
-
-.burger-menu {
-    position: absolute;
-    margin: 0;
-    right: -300px;
-    width: 300px;
-    height: 100%;
-    padding: 20px;
     background-color: white;
-    transition: 0.5s;
-    overflow: hidden;
+    margin-top: 65px;
     position: fixed;
-    z-index: 1;
+    width: 200px;
+    height: 100vh;
+    z-index: 4;
+    right: -210px;
+    transition: 0.3s;
+    display: none;
 }
 
-.burger-menu.active {
-    right: 0;
-    transition: 0.5s;
-}
-
-.burger-menu-ul {
+.header-menu-burger ul {
     list-style-type: none;
-    /* margin-top: 50px; */
+    padding: 0;
+    text-align: center;
 }
 
-.burger-menu-li {
-    margin: 20px 0;
-    cursor: pointer;
+.header-menu-burger.active {
+    transition: 0.3s;
+    right: 0px;
 }
 
 /* ================================================ Modal */
@@ -155,9 +108,9 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 1);
     border-radius: 5px;
     margin-top: 65px;
-    right: -310px;
-    width: 300px;
-    height: 400px;
+    right: -210px;
+    width: 200px;
+    height: 200px;
     padding: 20px;
     background-color: white;
     transition: 0.5s;
@@ -181,4 +134,44 @@
 
 .auth-modal-logOut {
     text-align: center;
+}
+
+.auth-modal-func {
+    display: flex;
+    justify-content: center;
+}
+
+.auth-modal-func ul {
+    padding: 0;
+    margin: 20px 0 20px 0;
+    list-style-type: none;
+}
+
+.auth-modal-func ul li {
+    margin-bottom: 10px;
+    color: black;
+}
+
+.burger-auth-modal-icon {
+    position: absolute;
+    right: -300px;
+    transition: 0.3s;
+}
+.burger-auth-modal-icon.active {
+    transition: 0.3s;
+    right: 30px;
+}
+@media (max-width: 860px) {
+    .header-menu {
+        display: none;
+    }
+    .header-account {
+        display: none;
+    }
+    .header-menu-burger-icon {
+        display: block;
+    }
+    .header-menu-burger {
+        display: block;
+    }
 }

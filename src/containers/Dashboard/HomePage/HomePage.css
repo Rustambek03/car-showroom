@@ -5,7 +5,6 @@
 }
 
 .home-page {
-    /* position: absolute; */
     height: 100px;
     width: 100%;
     border-bottom: #758388 1px solid;
@@ -13,7 +12,14 @@
 }
 
 .home-page-title {
-    /* text-align: ce; */
+    width: 150px;
+    height: 100px;
+}
+
+.home-page-title img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .home-page-container {
@@ -38,13 +44,12 @@
 }
 
 .home-page-modal {
-    /* position: absolute; */
     box-shadow: 0 0 10px rgba(0, 0, 0, 1);
     border-radius: 5px;
-    /* margin-top: 100px; */
-    right: -310px;
-    width: 300px;
-    height: 400px;
+    margin-top: -425px;
+    right: -210px;
+    width: 200px;
+    height: 200px;
     padding: 20px;
     background-color: white;
     transition: 0.5s;
@@ -70,14 +75,26 @@
     text-align: center;
 }
 
+.home-page-modal-func {
+    display: flex;
+    justify-content: center;
+}
+
+.home-page-modal-func ul {
+    padding: 0;
+    margin: 20px 0 20px 0;
+    list-style-type: none;
+}
+
+.home-page-modal-func ul li {
+    margin-bottom: 10px;
+    color: black;
+}
+
 .home-page-menu {
-    margin-top: 100px;
-    /* position: absolute; */
-    margin-left: 100px;
-    /* background-color: green; */
-    width: 300px;
-    height: 200px;
-    /* z-index: 1; */
+    margin-top: 30px;
+    text-align: center;
+    width: 200px;
 }
 
 .home-page-menu-ul {
@@ -89,4 +106,55 @@
     color: #f2f2f2;
     margin-bottom: 20px;
     cursor: pointer;
+}
+
+.home-page-ad-title {
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top: 20px;
+    border-top: 3px solid #f2f2f2;
+    border-bottom: 3px solid #f2f2f2;
+}
+
+.home-page-ad-title h5 {
+    margin: 10px 0 10px 0;
+    color: #f2f2f2;
+    font-size: 30px;
+}
+
+@media (max-width: 540px) {
+    .home-page-modal {
+        margin-top: -185px;
+    }
+    .home-page-menu-ul {
+        font-size: 16px;
+    }
+    .home-page-account-signin {
+        font-size: 15px;
+    }
+    .home-page-account-signup {
+        font-size: 15px;
+    }
+    .home-page {
+        height: 70px;
+    }
+    .home-page-title {
+        width: 120px;
+        height: 70px;
+    }
+    .home-page-ad-title h5 {
+        margin: 5px 0 5px 0;
+        color: #f2f2f2;
+        font-size: 20px;
+    }
+    .home-page-ad-title {
+        margin-bottom: 30px;
+        margin-top: 20px;
+        border-top: 2px solid #f2f2f2;
+        border-bottom: 2px solid #f2f2f2;
+    }
+    .home-page-modal {
+        margin-top: -360px;
+        width: 170px;
+    }
 }

@@ -1,25 +1,95 @@
 /* = ============================================================== Sidebar */
+.sidebar {
+    border-right: 1px solid #d8dadb;
+    height: 100vh;
+}
+
+.sidebar-title span {
+    display: none;
+    position: absolute;
+    margin: 10px 0 0 10px;
+}
 
 .sidebar-price {
     width: 100%;
-    border: solid 1px #d8dadb;
+    border-bottom: solid 1px #d8dadb;
     height: 120px;
-    border-radius: 5px;
 }
 
 .sidebar-title {
     text-align: center;
 }
 
-.sidebar-slider {
+.sidebar-title h5 {
+    padding-top: 10px;
+}
+
+.sidebar-price-title {
     text-align: center;
 }
 
-.sidebar-slider-inp {
+.sidebar-slider {
+    text-align: center;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 .sidebar-slider-input {
     width: 40%;
+}
+
+.sidebar-search-inp input {
+    border-radius: 10px;
+    padding: 3px 10px 3px 10px;
+    background-color: #f4f4f4;
+    border: 1px solid rgb(189, 189, 189);
+    transition: 0.2s;
+    outline: none;
+}
+
+.sidebar-search-inp input:hover {
+    transition: 0.2s;
+    border: 1px solid rgb(0, 0, 0);
+}
+
+.sidebar-search {
+    padding: 20px 0 20px 0;
+    border-top: solid 1px #d8dadb;
+    border-bottom: solid 1px #d8dadb;
+    text-align: center;
+}
+
+.sidebar-category-title {
+    text-align: center;
+}
+
+.sidebar-category-title p {
+    margin-bottom: 0;
+}
+
+.sidebar-category {
+}
+
+.sidebar-category-checkboxs {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-checkbox {
+    margin: 0 !important;
+    margin-left: 20px;
+}
+
+.sidebar-category-checkbox-content {
+    text-align: center;
+}
+
+@media (max-width: 960px) {
+    .sidebar span {
+        display: block;
+    }
+    .sidebar-search {
+        display: none;
+    }
 }

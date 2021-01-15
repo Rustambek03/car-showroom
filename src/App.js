@@ -1,11 +1,12 @@
-import AuthContextProvider from "./context/AuthContext";
-import ProductsContextProvider from "./context/ProductContext";
 import Routes from "./Routes";
+import { ToastProvider } from 'react-toast-notifications';
 
 function App() {
   return (
     <div className="App">
-      <Routes />
+      <ToastProvider>
+        <Routes />
+      </ToastProvider>
     </div>
   );
 }

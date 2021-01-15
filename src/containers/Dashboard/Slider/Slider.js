@@ -19,16 +19,6 @@ const Slider = () => {
     }
 
 
-    const imageStyle = {
-        width: "100%",
-        objectFit: "cover",
-        marginTop: "-80px",
-        height: "800px",
-        zIndex: -1,
-        position: "relative"
-    }
-
-
     return (
         <div >
             <Carousel style={{ zIndex: "0" }} activeIndex={index} onSelect={handleSelect} interval={3500} controls={false}>
@@ -36,15 +26,10 @@ const Slider = () => {
                     < Carousel.Item key={item.id} >
                         <div className="slider-container">
                             <img
-                                style={imageStyle}
                                 src={item.image}
                                 alt="First slide"
                             />
                         </div>
-                        {/* <Carousel.Caption>
-                            <h3 style={{ cursor: "pointer" }} >{item.title}</h3>
-                            <p>{item.description} </p>
-                        </Carousel.Caption> */}
                     </Carousel.Item>
                 )}
             </Carousel>

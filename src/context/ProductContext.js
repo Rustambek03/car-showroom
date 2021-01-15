@@ -28,7 +28,7 @@ const reducer = (state = INIT_STATE, action) => {
         case "HANDLE_SEARCH":
             return { ...state, productList: action.payload }
         case "GET_FAVORITES":
-            return { ...state, favoriteData: action.payload }
+            return { ...state, favoriteData: action.payload, productCountInFavorites: action.payload.products.length }
         case "COUNT_PRODUCTS_IN_FAVORITES":
             return { ...state, productCountInFavorites: action.payload }
     }
@@ -55,7 +55,7 @@ const ProductsContextProvider = ({ children }) => {
     }
 
     async function getProductList(value) {
-        let { data } = await axios(`http://localhost:8000/cars${window.location.search}`)
+        let { data } = await axios(`http://localhost:8000/cars${window.location.search.replace('%3D', '')}`)
         dispatch({
             type: "GET_PRODUCT_LIST",
             payload: data

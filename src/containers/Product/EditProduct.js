@@ -1,6 +1,9 @@
 import { Link } from 'react-router-dom';
 import React, { useContext, useEffect, useState } from 'react';
 import { productsContext } from '../../context/ProductContext';
+import Header from '../Dashboard/Header/Header';
+import TextField from '@material-ui/core/TextField';
+import Fade from 'react-reveal/Fade';
 
 const EditProduct = () => {
 
@@ -23,94 +26,207 @@ const EditProduct = () => {
     console.log(newEditItem)
 
     return (
-        <>{newEditItem ?
-            <div className="edit-product">
-                <div className="edit-product-container">
-                    <form>
-                        <input
-                            type="text"
-                            name="title"
-                            defaultValue={newEditItem.title}
-                            onChange={handleValue}
-                        />
-                        <input
-                            type="text"
-                            name="price"
-                            defaultValue={newEditItem.price}
-                            onChange={handleValue}
-                        />
-                        <input
-                            type="text"
-                            name="duration"
-                            defaultValue={newEditItem.duration}
-                            onChange={handleValue}
-                        />
-                        <input
-                            type="text"
-                            name="racing"
-                            defaultValue={newEditItem.racing}
-                            onChange={handleValue}
-                        />
-                        <input
-                            type="text"
-                            name="category"
-                            defaultValue={newEditItem.category}
-                            onChange={handleValue}
-                        />
-                        <input
-                            type="text"
-                            name="driveUnit"
-                            defaultValue={newEditItem.driveUnit}
-                            onChange={handleValue}
-                        />
-                        <input
-                            type="text"
-                            name="range"
-                            defaultValue={newEditItem.range}
-                            onChange={handleValue}
-                        />
-                        <input
-                            type="text"
-                            name="room"
-                            defaultValue={newEditItem.room}
-                            onChange={handleValue}
-                        />
-                        <input
-                            type="text"
-                            name="image"
-                            defaultValue={newEditItem.image}
-                            onChange={handleValue}
-                        />
-                        <input
-                            type="text"
-                            name="description1"
-                            defaultValue={newEditItem.description1}
-                            onChange={handleValue}
-                        />
-                        <input
-                            type="text"
-                            name="description2"
-                            defaultValue={newEditItem.description2}
-                            onChange={handleValue}
-                        />
-                        <input
-                            type="text"
-                            name="description3"
-                            defaultValue={newEditItem.description3}
-                            onChange={handleValue}
-                        />
-                    </form>
-                    <div className="edit-product-btn">
-                        <Link to="/productList">
-                            <button onClick={() => saveProduct(newEditItem)}>
-                                Save
-                        </button>
-                        </Link>
-                    </div>
+        <>
+            <Header />
+            <div>
+                <div className="edit-product">
+                    <Fade top>
+                        <div className="edit-product-title">
+                            <h2> Add Product </h2>
+                        </div>
+                    </Fade>
+                    {newEditItem ?
+                        <>
+                            <div className="edit-product-container">
+                                <Fade left delay={200}>
+                                    <div className="edit-product-first-column">
+                                        <div className="edit-product-first-column-title">
+                                            <h3>About</h3>
+                                        </div>
+                                        <div className="edit-product-form-input">
+                                            <p>Title*</p>
+                                            <TextField
+                                                className="edit-product-form-inp"
+                                                type="text"
+                                                defaultValue={newEditItem.title}
+                                                onChange={handleValue}
+                                                variant="outlined"
+                                            />
+                                        </div>
+                                        <div className="edit-product-form-input">
+                                            <p>Price*</p>
+                                            <TextField
+                                                className="edit-product-form-inp"
+                                                type="number"
+                                                defaultValue={newEditItem.price}
+                                                onChange={handleValue}
+                                                variant="outlined"
+                                            />
+                                        </div>
+                                        <div className="edit-product-form-input">
+                                            <p>Category*</p>
+                                            <TextField
+                                                className="edit-product-form-inp"
+                                                type="text"
+                                                defaultValue={newEditItem.category}
+                                                onChange={handleValue}
+                                                variant="outlined"
+                                            />
+                                        </div>
+                                        <div className="edit-product-form-input">
+                                            <p>Drive Unit*</p>
+                                            <TextField
+                                                className="edit-product-form-inp"
+                                                type="text"
+                                                defaultValue={newEditItem.driveUnit}
+                                                onChange={handleValue}
+                                                variant="outlined"
+                                            />
+                                        </div>
+                                        <div className="edit-product-form-input">
+                                            <p>Short name Drive Unit*</p>
+                                            <TextField
+                                                className="edit-product-form-inp"
+                                                type="text"
+                                                defaultValue={newEditItem.shortDriveUnit}
+                                                onChange={handleValue}
+                                                variant="outlined"
+                                            />
+                                        </div>
+                                        <div className="edit-product-form-input">
+                                            <p>Third Image*</p>
+                                            <TextField
+                                                className="edit-product-form-inp"
+                                                type="text"
+                                                defaultValue={newEditItem.detailImage3}
+                                                onChange={handleValue}
+                                                variant="outlined"
+                                            />
+                                        </div>
+                                        <div className="edit-product-form-input">
+                                            <p>Second Image*</p>
+                                            <TextField
+                                                className="edit-product-form-inp"
+                                                type="text"
+                                                defaultValue={newEditItem.detailImage2}
+                                                onChange={handleValue}
+                                                variant="outlined"
+                                            />
+                                        </div>
+                                        <div className="edit-product-form-input">
+                                            <p>First Image*</p>
+                                            <TextField
+                                                className="edit-product-form-inp"
+                                                type="text"
+                                                defaultValue={newEditItem.detailImage}
+                                                onChange={handleValue}
+                                                variant="outlined"
+                                            />
+                                        </div>
+                                        <div className="edit-product-form-input">
+                                            <p>Main Image*</p>
+                                            <TextField
+                                                className="edit-product-form-inp"
+                                                type="text"
+                                                defaultValue={newEditItem.image}
+                                                onChange={handleValue}
+                                                variant="outlined"
+                                            />
+                                        </div>
+                                    </div>
+                                </Fade>
+                                <Fade right delay={200}>
+                                    <div className="edit-product-second-column">
+                                        <div className="edit-product-second-column-title">
+                                            <h3>Specs</h3>
+                                        </div>
+                                        <div className="edit-product-form-input">
+                                            <p>Acceleration*</p>
+                                            <TextField
+                                                className="edit-product-form-inp"
+                                                type="number"
+                                                defaultValue={newEditItem.racing}
+                                                onChange={handleValue}
+                                                variant="outlined"
+                                            />
+                                        </div>
+                                        <div className="edit-product-form-input">
+                                            <p>Duration*</p>
+                                            <TextField
+                                                className="edit-product-form-inp"
+                                                type="number"
+                                                defaultValue={newEditItem.duration}
+                                                onChange={handleValue}
+                                                variant="outlined"
+                                            />
+                                        </div>
+                                        <div className="edit-product-form-input">
+                                            <p>Range*</p>
+                                            <TextField
+                                                className="edit-product-form-inp"
+                                                type="number"
+                                                defaultValue={newEditItem.range}
+                                                onChange={handleValue}
+                                                variant="outlined"
+                                            />
+                                        </div>
+                                        <div className="edit-product-form-input">
+                                            <p>Max Speed*</p>
+                                            <TextField
+                                                className="edit-product-form-inp"
+                                                type="number"
+                                                defaultValue={newEditItem.maxSpeed}
+                                                onChange={handleValue}
+                                                variant="outlined"
+                                            />
+                                        </div>
+                                        <div className="edit-product-form-input">
+                                            <p>Seating*</p>
+                                            <TextField
+                                                className="edit-product-form-inp"
+                                                type="number"
+                                                defaultValue={newEditItem.seating}
+                                                onChange={handleValue}
+                                                variant="outlined"
+                                            />
+                                        </div>
+                                        <div className="edit-product-form-input">
+                                            <p>Weight*</p>
+                                            <TextField
+                                                className="edit-product-form-inp"
+                                                type="number"
+                                                defaultValue={newEditItem.weight}
+                                                onChange={handleValue}
+                                                variant="outlined"
+                                            />
+                                        </div>
+                                        <div className="edit-product-form-input">
+                                            <p>Wheels*</p>
+                                            <TextField
+                                                className="edit-product-form-inp"
+                                                type="number"
+                                                defaultValue={newEditItem.wheels}
+                                                onChange={handleValue}
+                                                variant="outlined"
+                                            />
+                                        </div>
+                                    </div>
+                                </Fade>
+                            </div>
+                            <Fade bottom >
+                                <div className="edit-product-button">
+                                    <Link to="/productList">
+                                        <button className="edit-product-btn" onClick={() => saveProduct(newEditItem)}>
+                                            Save
+                                    </button>
+                                    </Link>
+                                </div>
+                            </Fade>
+                        </>
+                        : <h1>Loading....</h1>
+                    }
                 </div>
             </div>
-            : <h1>Loading....</h1>
-        }
         </>
     );
 };

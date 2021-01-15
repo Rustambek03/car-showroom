@@ -1,0 +1,105 @@
+.test-drive {
+    padding-top: 65px;
+    background-color: white;
+}
+
+.test-drive-title {
+    text-align: center;
+}
+
+.test-drive-title h1 {
+    padding: 20px 0 20px 0;
+    color: black;
+}
+
+.test-drive-content-image {
+    text-align: center;
+}
+
+.test-drive-content-image img {
+    width: 80%;
+}
+
+.test-drive-content-image-title-h1 {
+    display: flex;
+    justify-content: center;
+}
+
+.test-drive-content-image-title-h1 h1 {
+    width: 50%;
+    color: black;
+}
+
+.test-drive-content-image-title {
+    text-align: center;
+}
+
+.test-drive-content-image-title h1 {
+    padding: 30px 0 30px 0;
+    border-bottom: black 2px solid;
+    border-top: black 2px solid;
+    color: black;
+}
+
+.test-drive-content-form {
+}
+
+.test-drive-content-form-title {
+    text-align: center;
+}
+
+.test-drive-content-form-title h2 {
+    margin: 20px 0 20px 0;
+    color: black;
+}
+
+.test-drive-content-form-inp {
+    width: 300px;
+}
+
+.test-drive-content-form-inputs {
+    margin: 0 100px 0;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.test-drive-content-form-input p {
+    margin: 0;
+    color: black;
+}
+
+.test-drive-content-form-button {
+    margin: 30px 0 30px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.test-drive-content-form-btn {
+    font-size: large;
+    background-color: black;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    outline: none;
+    padding: 5px 50px 5px 50px;
+}
+
+@media (max-width: 860px) {
+    .test-drive-title h1,
+    .test-drive-content-image-title-h1 h1,
+    .test-drive-content-form-title h2 {
+        font-size: 30px;
+    }
+    .test-drive-content-form-inp {
+        width: 240px;
+    }
+}
+
+@media (max-width: 400px) {
+    .test-drive-title h1,
+    .test-drive-content-image-title-h1 h1,
+    .test-drive-content-form-title h2 {
+        font-size: 22px;
+    }
+}

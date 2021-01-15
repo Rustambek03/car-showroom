@@ -5,27 +5,24 @@ import './Footer.css';
 
 const Footer = () => {
     return (
-        <div style={{ width: "100%", backgroundColor: "#333333", minHeight: "330px" }}>
-            <Grid container style={{ paddingTop: "40px", paddingBottom: "20px", textAlign: "center" }}>
-                <Grid item md={4}>
+        <div className="footer">
+            <Grid container className="footer-container-top">
+                <Grid item md={6} className="footer-container-top-content">
                     <h3>About Us</h3>
-                    <div style={{ margin: "20px 100px", textAlign: "start" }}>
+                    <div className="footer-container-top-address">
                         <img style={{ width: "35px", marginRight: "15px" }} src="https://image.flaticon.com/icons/png/512/126/126103.png" alt="" />
                         <a href="tel: 0777 77 77 77" style={{ color: "white", textDecoration: "none" }}>+996 777 77 77 77</a>
                     </div>
-                    <div style={{ margin: "20px 100px", textAlign: "start" }}>
+                    <div className="footer-container-top-address">
                         <img style={{ width: "35px", marginRight: "15px" }} src="https://image.flaticon.com/icons/png/512/126/126516.png" alt="" />
                         <a href="tel: 0777 77 77 77" style={{ color: "white", textDecoration: "none" }}>electricCar@gmail.com</a>
                     </div>
-                    <div style={{ margin: "20px 100px", textAlign: "start" }}>
+                    <div className="footer-container-top-address">
                         <img style={{ width: "35px", marginRight: "15px" }} src="https://image.flaticon.com/icons/png/512/121/121383.png" alt="" />
                         <a href="tel: 0777 77 77 77" style={{ color: "white", textDecoration: "none" }}>Isanova 105/3, Bishkek</a>
                     </div>
                 </Grid>
-                <Grid item md={4}>
-                    <h3>Popular News</h3>
-                </Grid>
-                <Grid item md={4}>
+                <Grid item md={6} className="footer-container-top-content">
                     <h3>Quick Links</h3>
                 </Grid>
             </Grid>

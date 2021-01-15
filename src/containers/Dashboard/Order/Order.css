@@ -1,0 +1,186 @@
+.order {
+    /* padding-top: 65px; */
+}
+
+.order-content-form {
+    background-color: #f4f4f4;
+    padding: 70px 120px 20px 120px;
+}
+
+.order-content-form-details {
+    border-bottom: 1px solid #cccccc;
+}
+
+.order-content-form-details-title {
+    margin-bottom: 20px;
+}
+
+.order-content-form-details-form,
+.order-content-form-payment-content-inputs {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.order-content-form-details-form-input {
+    /* margin-bottom: 10px; */
+}
+.order-content-form-payment-content-input p {
+    margin: 5px;
+    color: black;
+}
+
+.order-content-form-details-form-input p {
+    margin: 5px;
+    color: black;
+}
+
+.order-content-form-details-form-inp,
+.order-content-form-payment-content-inp {
+    width: 300px;
+}
+
+.order-content-form-payment-title h5 {
+    margin-top: 30px 0 20px 0;
+    color: black;
+}
+
+.order-content-form-payment-content-card {
+    display: flex;
+    justify-content: center;
+}
+
+.order-content-button {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.order-content-btn {
+    background-color: white;
+    color: black;
+    border-radius: 20px;
+    border: 1px solid black;
+    transition: 0.3s;
+    outline: none;
+    padding: 5px 35px 5px 35px;
+}
+
+.order-content-btn:hover {
+    transition: 0.3s;
+    color: white;
+    background-color: black;
+}
+
+.order-content-button2 {
+    display: none;
+}
+
+.order-content-btn2 {
+    background-color: white;
+    color: black;
+    border-radius: 20px;
+    border: 1px solid black;
+    transition: 0.3s;
+    padding: 5px 35px 5px 35px;
+    outline: none;
+}
+
+.order-content-button2:hover {
+    transition: 0.3s;
+    color: white;
+    background-color: black;
+}
+/* ======================================================================== Grid 2 */
+.order-content-product {
+    position: fixed;
+    right: 0;
+    padding: 70px 30px 20px 30px;
+    height: 100vh;
+    border-left: 1px solid #cccccc;
+}
+
+.order-content-product-image {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.order-content-product-image img {
+    width: 80%;
+    object-fit: cover;
+}
+
+.order-content-product-title {
+    text-align: center;
+}
+
+.order-content-product-title h3 {
+    color: black;
+    margin: 0 0 20px 0;
+}
+
+.order-content-product-title p {
+    font-size: 13px;
+    color: #cccccc;
+}
+
+.order-content-product-info {
+    /* display: flex;
+    justify-content: center; */
+}
+
+.order-content-product-info-title {
+    border-bottom: 1px solid #cccccc;
+    /* width: 80%; */
+}
+
+.order-content-product-info-title h4 {
+    color: black;
+}
+
+.order-content-product-info ul {
+    list-style-type: none;
+    padding: 0;
+    color: black;
+}
+
+.order-content-product-info-price {
+    text-align: center;
+}
+
+@media (max-width: 1270px) {
+    .order-content-form-details-form-inp,
+    .order-content-form-payment-content-inp {
+        width: 250px;
+    }
+}
+
+@media (max-width: 1120px) {
+    .order-content-form-details-form-inp,
+    .order-content-form-payment-content-inp {
+        width: 200px;
+    }
+    .order-content-form {
+        padding: 70px 70px 15px 70px;
+    }
+}
+
+@media (max-width: 960px) {
+    .order-content-product {
+        position: static;
+    }
+    .order-content-button {
+        display: none;
+    }
+    .order-content-button2 {
+        display: block;
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+    }
+    .order-content-btn2 {
+        margin-bottom: 30px;
+    }
+}

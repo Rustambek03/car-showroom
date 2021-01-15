@@ -1,3 +1,20 @@
-h3 {
+.footer {
+    width: 100%;
+    background-color: #333333;
+    min-height: 330px;
+}
+
+.footer-container-top {
+    padding-top: 40px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.footer-container-top-content h3 {
     color: white;
+}
+
+.footer-container-top-address {
+    margin: 20px, 100px;
+    text-align: start;
 }

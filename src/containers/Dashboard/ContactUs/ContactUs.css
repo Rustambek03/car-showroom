@@ -1,0 +1,145 @@
+.contact-us {
+    /* padding-top: 70px; */
+}
+
+.contact-us-container {
+    background-color: #f8f8f9;
+    min-height: 100vh;
+    max-height: 100%;
+}
+
+.contact-us-container-image {
+    width: 100%;
+    height: 70vh;
+}
+
+.contact-us-container-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.contact-us-container-title {
+    position: absolute;
+    top: 0;
+    height: 70vh;
+    width: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-us-container-title h1 {
+    text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1),
+        0px 18px 23px rgba(0, 0, 0, 0.1);
+    color: white;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.contact-us-column-content {
+    margin-top: 50px;
+    padding-bottom: 50px;
+}
+
+/* .contact-us-column-content1,
+.contact-us-column-content2 {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+} */
+
+.contact-us-1column-title {
+    display: flex;
+    justify-content: center;
+}
+
+.contact-us-column-content1-info {
+    margin-bottom: 30px;
+}
+
+.contact-us-column-content1-address {
+    display: flex;
+    justify-content: center;
+}
+
+.contact-us-column-content1-address a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
+
+.contact-us-description {
+    text-align: center;
+    padding: 0 30px 20px;
+}
+
+.contact-us-2column-title {
+    display: flex;
+    justify-content: center;
+}
+
+.contact-us-inputs {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    /* height: 400px; */
+}
+
+.contact-us-input p {
+    margin: 0;
+}
+
+.contact-us-input {
+    margin: 0 15px;
+}
+
+.contact-us-inp {
+    width: 250px;
+    border-radius: 10px;
+    padding: 5px 10px 5px 10px;
+    background-color: white;
+    border: 1px solid rgb(189, 189, 189);
+    transition: 0.2s;
+    outline: none;
+}
+
+.contact-us-inp3 {
+    width: 350px;
+    height: 150px;
+    border-radius: 10px;
+    padding: 5px 10px 5px 10px;
+    background-color: white;
+    border: 1px solid rgb(189, 189, 189);
+    transition: 0.2s;
+    outline: none;
+}
+
+.contact-us-button {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.contact-us-btn {
+    padding: 5px 35px;
+    background-color: white;
+    border-radius: 20px;
+    border: 1px solid black;
+    outline: none;
+    transition: 0.3s;
+}
+
+.contact-us-btn:hover {
+    transition: 0.3s;
+    background-color: black;
+    color: white;
+}
+
+@media (max-width: 400px) {
+    .contact-us-inp3 {
+        width: 250px;
+    }
+}
