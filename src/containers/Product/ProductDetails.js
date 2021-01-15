@@ -5,13 +5,12 @@ import CountUp from 'react-countup';
 import "./Product.css";
 import { Link } from 'react-router-dom';
 import Header from '../Dashboard/Header/Header';
-import Footer from '../Dashboard/Footer/Footer';
 import { Grid } from '@material-ui/core';
 import Fade from 'react-reveal/Fade';
 
 const ProductDetails = (props) => {
 
-    const { getProductDetails, productDetails, deleteProduct, editProduct } = useContext(productsContext)
+    const { getProductDetails, productDetails } = useContext(productsContext)
 
     useEffect(() => {
         getProductDetails(props.match.params.id)

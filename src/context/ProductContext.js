@@ -1,6 +1,8 @@
 import axios from 'axios';
 import React, { useReducer } from 'react';
 
+const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:8000';
+
 export const productsContext = React.createContext();
 
 let INIT_STATE = {
@@ -38,7 +40,7 @@ const ProductsContextProvider = ({ children }) => {
     const [state, dispatch] = useReducer(reducer, INIT_STATE)
 
     async function getSlider() {
-        let { data } = await axios(`http://localhost:8000/sliderPhoto`)
+        let { data } = await axios(`${API_URL}/sliderPhoto`)
         dispatch({
             type: "GET_SLIDER",
             payload: data
@@ -47,7 +49,7 @@ const ProductsContextProvider = ({ children }) => {
     }
 
     async function getPopularCar() {
-        let { data } = await axios(`http://localhost:8000/popularCar`)
+        let { data } = await axios(`${API_URL}/popularCar`)
         dispatch({
             type: "GET_POPULAR_CAR",
             payload: data
@@ -55,7 +57,7 @@ const ProductsContextProvider = ({ children }) => {
     }
 
     async function getProductList(value) {
-        let { data } = await axios(`http://localhost:8000/cars${window.location.search.replace('%3D', '')}`)
+        let { data } = await axios(`${API_URL}/cars${window.location.search.replace('%3D', '')}`)
         dispatch({
             type: "GET_PRODUCT_LIST",
             payload: data
@@ -63,7 +65,7 @@ const ProductsContextProvider = ({ children }) => {
     }
 
     async function handleSearch(value) {
-        let { data } = await axios(`http://localhost:8000/cars?q=${value}`)
+        let { data } = await axios(`${API_URL}/cars?q=${value}`)
         dispatch({
             type: "HANDLE_SEARCH",
             payload: data
@@ -71,7 +73,7 @@ const ProductsContextProvider = ({ children }) => {
     }
 
     async function getProductDetails(id) {
-        let { data } = await axios(`http://localhost:8000/cars/${id}`)
+        let { data } = await axios(`${API_URL}/cars/${id}`)
         dispatch({
             type: "GET_PRODUCT_DETAILS",
             payload: data
@@ -79,12 +81,12 @@ const ProductsContextProvider = ({ children }) => {
     }
 
     async function deleteProduct(id) {
-        await axios.delete(`http://localhost:8000/cars/${id}`)
+        await axios.delete(`${API_URL}/cars/${id}`)
         getProductList()
     }
 
     async function editProduct(id) {
-        let { data } = await axios(`http://localhost:8000/cars/${id}`)
+        let { data } = await axios(`${API_URL}/cars/${id}`)
         dispatch({
             type: "EDIT_PRODUCT",
             payload: data
@@ -92,12 +94,12 @@ const ProductsContextProvider = ({ children }) => {
     }
 
     async function saveProduct(newProduct) {
-        await axios.patch(`http://localhost:8000/cars/${newProduct.id}`, newProduct)
+        await axios.patch(`${API_URL}/cars/${newProduct.id}`, newProduct)
         getProductList()
     }
 
     async function addProduct(newProduct) {
-        await axios.post(`http://localhost:8000/cars`, newProduct)
+        await axios.post(`${API_URL}/cars`, newProduct)
         getProductList()
     }
 

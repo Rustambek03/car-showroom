@@ -48,6 +48,7 @@ const EditProduct = () => {
                                             <TextField
                                                 className="edit-product-form-inp"
                                                 type="text"
+                                                name="title"
                                                 defaultValue={newEditItem.title}
                                                 onChange={handleValue}
                                                 variant="outlined"
@@ -58,6 +59,7 @@ const EditProduct = () => {
                                             <TextField
                                                 className="edit-product-form-inp"
                                                 type="number"
+                                                name="price"
                                                 defaultValue={newEditItem.price}
                                                 onChange={handleValue}
                                                 variant="outlined"
@@ -68,6 +70,7 @@ const EditProduct = () => {
                                             <TextField
                                                 className="edit-product-form-inp"
                                                 type="text"
+                                                name="category"
                                                 defaultValue={newEditItem.category}
                                                 onChange={handleValue}
                                                 variant="outlined"
@@ -78,6 +81,7 @@ const EditProduct = () => {
                                             <TextField
                                                 className="edit-product-form-inp"
                                                 type="text"
+                                                name="driveUnit"
                                                 defaultValue={newEditItem.driveUnit}
                                                 onChange={handleValue}
                                                 variant="outlined"
@@ -88,6 +92,7 @@ const EditProduct = () => {
                                             <TextField
                                                 className="edit-product-form-inp"
                                                 type="text"
+                                                name="shortDriveUnit"
                                                 defaultValue={newEditItem.shortDriveUnit}
                                                 onChange={handleValue}
                                                 variant="outlined"
@@ -98,6 +103,7 @@ const EditProduct = () => {
                                             <TextField
                                                 className="edit-product-form-inp"
                                                 type="text"
+                                                name="detailImage3"
                                                 defaultValue={newEditItem.detailImage3}
                                                 onChange={handleValue}
                                                 variant="outlined"
@@ -108,6 +114,7 @@ const EditProduct = () => {
                                             <TextField
                                                 className="edit-product-form-inp"
                                                 type="text"
+                                                name="detailImage2"
                                                 defaultValue={newEditItem.detailImage2}
                                                 onChange={handleValue}
                                                 variant="outlined"
@@ -118,6 +125,7 @@ const EditProduct = () => {
                                             <TextField
                                                 className="edit-product-form-inp"
                                                 type="text"
+                                                anme="detailImage"
                                                 defaultValue={newEditItem.detailImage}
                                                 onChange={handleValue}
                                                 variant="outlined"
@@ -128,6 +136,7 @@ const EditProduct = () => {
                                             <TextField
                                                 className="edit-product-form-inp"
                                                 type="text"
+                                                name="image"
                                                 defaultValue={newEditItem.image}
                                                 onChange={handleValue}
                                                 variant="outlined"
@@ -145,6 +154,7 @@ const EditProduct = () => {
                                             <TextField
                                                 className="edit-product-form-inp"
                                                 type="number"
+                                                name="racing"
                                                 defaultValue={newEditItem.racing}
                                                 onChange={handleValue}
                                                 variant="outlined"
@@ -155,6 +165,7 @@ const EditProduct = () => {
                                             <TextField
                                                 className="edit-product-form-inp"
                                                 type="number"
+                                                name="duration"
                                                 defaultValue={newEditItem.duration}
                                                 onChange={handleValue}
                                                 variant="outlined"
@@ -165,6 +176,7 @@ const EditProduct = () => {
                                             <TextField
                                                 className="edit-product-form-inp"
                                                 type="number"
+                                                name="range"
                                                 defaultValue={newEditItem.range}
                                                 onChange={handleValue}
                                                 variant="outlined"
@@ -175,6 +187,7 @@ const EditProduct = () => {
                                             <TextField
                                                 className="edit-product-form-inp"
                                                 type="number"
+                                                name="maxSpeed"
                                                 defaultValue={newEditItem.maxSpeed}
                                                 onChange={handleValue}
                                                 variant="outlined"
@@ -185,6 +198,7 @@ const EditProduct = () => {
                                             <TextField
                                                 className="edit-product-form-inp"
                                                 type="number"
+                                                name="seating"
                                                 defaultValue={newEditItem.seating}
                                                 onChange={handleValue}
                                                 variant="outlined"
@@ -195,6 +209,7 @@ const EditProduct = () => {
                                             <TextField
                                                 className="edit-product-form-inp"
                                                 type="number"
+                                                name="weight"
                                                 defaultValue={newEditItem.weight}
                                                 onChange={handleValue}
                                                 variant="outlined"
@@ -205,6 +220,7 @@ const EditProduct = () => {
                                             <TextField
                                                 className="edit-product-form-inp"
                                                 type="number"
+                                                name="wheels"
                                                 defaultValue={newEditItem.wheels}
                                                 onChange={handleValue}
                                                 variant="outlined"
