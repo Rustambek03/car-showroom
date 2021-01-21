@@ -41,7 +41,7 @@ const HomePage = () => {
                 <div className="home-page">
                     <div className="home-page-container">
                         <div className="home-page-title">
-                            <img src="" alt="" />
+                            <img src="https://www.pngrepo.com/download/303366/tesla-motors-logo.png" alt="" />
                         </div>
                         <div className="home-page-account">
                             {currentUser && currentUser.email ?
@@ -77,12 +77,12 @@ const HomePage = () => {
 
                             <Fade left delay={600}>
                                 <Link to="/signIn" style={{ textDecoration: "none" }} >
-                                    <h5 className="home-page-menu-li">Sign in</h5>
+                                    <li className="home-page-menu-li">Sign in</li>
                                 </Link>
                             </Fade>
                             <Fade left delay={800}>
                                 <Link to="/signUp" style={{ textDecoration: "none" }} >
-                                    <h5 className="home-page-menu-li">Sign up</h5>
+                                    <li className="home-page-menu-li">Sign up</li>
                                 </Link>
                             </Fade>
                             <Fade left delay={1000}>
