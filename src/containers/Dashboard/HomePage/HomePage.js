@@ -74,22 +74,27 @@ const HomePage = () => {
                                     <li className="home-page-menu-li">Cars in stock</li>
                                 </Link>
                             </Fade>
-
                             <Fade left delay={600}>
-                                <Link to="/signIn" style={{ textDecoration: "none" }} >
-                                    <li className="home-page-menu-li">Sign in</li>
-                                </Link>
-                            </Fade>
-                            <Fade left delay={800}>
-                                <Link to="/signUp" style={{ textDecoration: "none" }} >
-                                    <li className="home-page-menu-li">Sign up</li>
-                                </Link>
-                            </Fade>
-                            <Fade left delay={1000}>
                                 <Link to="/contactUs" style={{ textDecoration: "none" }} >
                                     <li className="home-page-menu-li">Contact Us</li>
                                 </Link>
                             </Fade>
+                            {currentUser && currentUser.email ?
+                                null :
+                                <Fade left delay={800}>
+                                    <Link to="/signIn" style={{ textDecoration: "none" }} >
+                                        <li className="home-page-menu-li">Sign in</li>
+                                    </Link>
+                                </Fade>
+                            }
+                            {currentUser && currentUser.email ?
+                                null :
+                                <Fade left delay={1000}>
+                                    <Link to="/signUp" style={{ textDecoration: "none" }} >
+                                        <li className="home-page-menu-li">Sign up</li>
+                                    </Link>
+                                </Fade>
+                            }
                             {currentUser && currentUser.email ?
                                 <Fade left delay={1200}>
                                     <Link to="/addProduct" style={{ textDecoration: "none" }}>
