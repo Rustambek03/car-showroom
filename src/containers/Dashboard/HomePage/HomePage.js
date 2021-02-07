@@ -96,7 +96,7 @@ const HomePage = () => {
                                 </Fade>
                             }
                             {currentUser && currentUser.email ?
-                                <Fade left delay={1200}>
+                                <Fade left delay={800}>
                                     <Link to="/addProduct" style={{ textDecoration: "none" }}>
                                         <li className="home-page-menu-li">Add Product</li>
                                     </Link>
