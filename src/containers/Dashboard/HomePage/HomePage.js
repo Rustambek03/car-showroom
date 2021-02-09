@@ -49,14 +49,6 @@ const HomePage = () => {
                                     style={{ cursor: "pointer", marginRight: "20px", color: "#f2f2f2" }}
                                     onClick={clickHandler} />
                                 : null
-                                // : <div>
-                                //     <Link to="/signIn" style={{ textDecoration: "none" }} >
-                                //         <h5 className="home-page-account-signin">Sign in</h5>
-                                //     </Link>
-                                //     <Link to="/signUp" style={{ textDecoration: "none" }} >
-                                //         <h5 className="home-page-account-signup">Sign up</h5>
-                                //     </Link>
-                                // </div>
                             }
                         </div>
                     </div>
@@ -120,14 +112,6 @@ const HomePage = () => {
                             Log Out
                     </Button>
                     </div>
-                    {/* {currentUser && currentUser.email === "admin@admin.com" ?
-                        <div className="home-page-modal-func">
-                            <ul>
-
-                            </ul>
-                        </div>
-                        : null
-                    } */}
                 </div>
             </div>
             <Slider />
