@@ -58,7 +58,7 @@ const HomePage = () => {
                         <ul className="home-page-menu-ul">
                             <Fade top delay={100}>
                                 <div className="home-page-ad-title">
-                                    <h5> Future is <br /> already here </h5>
+                                    <h5> Future is <br /> already here Rustambek </h5>
                                 </div>
                             </Fade>
                             <Fade left delay={400}>
