@@ -85,10 +85,6 @@
     margin-top: 20px;
 }
 
-.product-list-menu {
-    /* padding-top: 70px; */
-}
-
 @media (max-width: 960px) {
     .product-list-container-span {
         margin: 20px 0 0 20px;
@@ -177,10 +173,10 @@
     transition: 0.3s;
 }
 
-.productCard-favorites-icon:hover {
+/* .productCard-favorites-icon:hover {
     transition: 0.3s;
     color: black;
-}
+} */
 
 .productCard-menu-icon:hover .productCard-edit-icons {
     display: block;
@@ -216,9 +212,6 @@
     margin: 0 5px;
 }
 
-.productCard-info-panel {
-}
-
 .productCard-title p {
     font-size: 22px;
     margin-bottom: 10px;
@@ -227,7 +220,8 @@
 }
 
 .productCard-price h5 {
-    padding: 0 20px;
+    margin: 15px 0 0 0;
+    padding: 0 20px 15px;
     font-size: 25px;
     color: black;
 }
@@ -239,6 +233,7 @@
 
 .productCard-mortgage p {
     padding: 7px 0;
+    margin: 0;
 }
 
 .productCard-information p {
@@ -267,13 +262,6 @@
     width: 100%;
     height: 100vh;
     object-fit: cover;
-}
-
-.product-details-content {
-    /* display: flex; */
-}
-
-.product-details-info {
 }
 
 .product-details-racing-speedometer {
@@ -374,8 +362,6 @@
     color: black;
 }
 
-.product-details-container {
-}
 .product-details-content-image {
     width: 50%;
     display: flex;
@@ -465,9 +451,18 @@
     margin: 0 20px 0 20px;
     transition: 0.3s;
     outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+    /* width: 200px; */
 }
 
-.product-details-experience-order-btn:nth-child(2) {
+.product-details-experience-order-btn:nth-child(1):hover {
+    transition: 0.3s;
+    background-color: white;
+    color: black;
+}
+
+/* .product-details-experience-order-btn:nth-child(2) {
     font-size: large;
     border-radius: 20px;
     padding: 3px 35px 3px 35px;
@@ -476,7 +471,7 @@
     background-color: black;
     outline: none;
     transition: 0.3s;
-}
+} */
 
 .product-details-experience-order-btn:nth-child(2):hover {
     transition: 0.3s;
@@ -649,8 +644,6 @@
 }
 
 @media (max-width: 760px) {
-    .edit-product-container {
-    }
     .edit-product-first-column,
     .edit-product-second-column {
         width: 90%;

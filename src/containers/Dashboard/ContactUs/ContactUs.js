@@ -1,7 +1,7 @@
 import { Grid, TextField } from '@material-ui/core';
 import React from 'react';
 import Header from '../Header/Header';
-import { withGoogleMap, GoogleMap } from 'react-google-maps';
+// import { withGoogleMap, GoogleMap } from 'react-google-maps';
 import Footer from '../Footer/Footer';
 import CallRoundedIcon from '@material-ui/icons/CallRounded';
 import RoomRoundedIcon from '@material-ui/icons/RoomRounded';
@@ -11,9 +11,9 @@ import Fade from 'react-reveal/Fade';
 import "./ContactUs.css";
 import { useHistory } from 'react-router-dom';
 
-const MyGoogleMapComponent = withGoogleMap(props => (
-    <GoogleMap />
-))
+// const MyGoogleMapComponent = withGoogleMap(props => (
+//     <GoogleMap />
+// ))
 
 
 const ContactUs = () => {

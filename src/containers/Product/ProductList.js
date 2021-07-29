@@ -11,6 +11,7 @@ import Sidebar from '../Dashboard/Sidebar/Sidebar';
 import Footer from '../Dashboard/Footer/Footer';
 import { Badge } from '@material-ui/core';
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
+import Fade from 'react-reveal/Fade';
 import MenuIcon from '@material-ui/icons/Menu';
 
 const ProductList = (props) => {
@@ -80,15 +81,17 @@ const ProductList = (props) => {
                                 ? currentPost.map((item) => <ProductCard item={item} key={item.id} />)
                                 : productList.map((item) => <ProductCard item={item} key={item.id} />)}
                         </div>
-                        <div className="product-list-pagination">
-                            {history.location.pathname === '/productList' ? (
-                                <PaginationComp
-                                    totalPage={productList.length}
-                                    postPerPage={postPerPage}
-                                    changePage={changePage}
-                                />
-                            ) : null}
-                        </div>
+                        <Fade top>
+                            <div className="product-list-pagination">
+                                {history.location.pathname === '/productList' ? (
+                                    <PaginationComp
+                                        totalPage={productList.length}
+                                        postPerPage={postPerPage}
+                                        changePage={changePage}
+                                    />
+                                ) : null}
+                            </div>
+                        </Fade>
                     </div>
                 </Grid>
             </Grid>

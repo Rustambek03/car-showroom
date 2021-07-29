@@ -97,14 +97,14 @@ const Header = () => {
                             <AccountCircleIcon
                                 style={{ cursor: "pointer", color: "black" }}
                                 onClick={clickHandlerAuth} />
-                            : <div>
+                            : <ul>
                                 <Link to="/signIn" style={{ textDecoration: "none" }} >
-                                    <h5>Sign in</h5>
+                                    <li>Sign in</li>
                                 </Link>
                                 <Link to="/signUp" style={{ textDecoration: "none" }} >
-                                    <h5>Sign up</h5>
+                                    <li>Sign up</li>
                                 </Link>
-                            </div>
+                            </ul>
                         }
                     </div>
                     {/* ======================================================== Burger Menu */}

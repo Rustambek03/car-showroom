@@ -33,7 +33,7 @@
 .header-menu-ul {
     padding: 0;
     color: white;
-    margin-bottom: 0px;
+    /* margin-bottom: 0px; */
     list-style-type: none;
     display: flex;
     justify-content: space-between;
@@ -56,15 +56,23 @@
     border-bottom: 1px solid #d8dadb;
 }
 
+.header-icon {
+    width: 65px;
+    height: 65px;
+}
+
 .header-icon-img {
-    width: 80px;
+    width: 100%;
 }
 
-.header-account div {
+.header-account ul {
     display: flex;
+    padding: 0;
 }
 
-.header-account h5 {
+.header-account li {
+    font-size: 20px;
+    list-style-type: none;
     margin: 0;
     margin-right: 20px;
     cursor: pointer;
@@ -108,7 +116,7 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 1);
     border-radius: 5px;
     margin-top: 65px;
-    right: -210px;
+    right: -250px;
     width: 200px;
     height: 200px;
     padding: 20px;

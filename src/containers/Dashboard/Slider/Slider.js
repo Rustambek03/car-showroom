@@ -1,7 +1,8 @@
 import React, { useContext, useEffect, useState } from 'react';
-import Carousel from 'react-bootstrap/Carousel';
 import { productsContext } from '../../../context/ProductContext';
-import './Slider.css'
+import './Slider.css';
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from 'react-responsive-carousel';
 
 
 const Slider = () => {
@@ -12,26 +13,24 @@ const Slider = () => {
         getSlider()
     }, [])
 
-    const [index, setIndex] = useState(0);
-
-    const handleSelect = (selectedIndex, e) => {
-        setIndex(selectedIndex)
-    }
-
 
     return (
         <div >
-            <Carousel style={{ zIndex: "0" }} activeIndex={index} onSelect={handleSelect} interval={3500} controls={false}>
-                {sliderImage.map(item =>
-                    < Carousel.Item key={item.id} >
-                        <div className="slider-container">
-                            <img
-                                src={item.image}
-                                alt="First slide"
-                            />
-                        </div>
-                    </Carousel.Item>
-                )}
+            <Carousel
+                autoPlay={true}
+                interval={5000}
+                showIndicators={false}
+                showStatus={false}
+                showThumbs={false}
+                infiniteLoop={true}
+                showArrows={false}
+            >
+                {sliderImage.map(item => (
+                    <div className="slider-container">
+                        <img src={item.image} />
+                        {/* <p className="legend">Legend 1</p> */}
+                    </div>
+                ))}
             </Carousel>
         </div >
     );
